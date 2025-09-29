@@ -20,7 +20,7 @@ function ccyFormat(num) {
 }
 
 function subtotal(items) {
-    return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
+    return items.map(({ price,qty }) => price*qty).reduce((sum, i) => sum + i, 0);
 }
 
 export default function SpanningTable(props) {
@@ -108,7 +108,7 @@ export default function SpanningTable(props) {
                                         </TableCell>
                                         <TableCell>{row.name}</TableCell>
                                         <TableCell align={"right"}>{row.qty}</TableCell>
-                                        <TableCell align={"right"}>{Format(row.price*1)}</TableCell>
+                                        <TableCell align={"right"}>{Format(row.price)}</TableCell>
                                         <TableCell align={"right"}><DeleteIcon className={"delIcon"} onClick={()=>{ deleteButton(row.id) }}/></TableCell>
                                     </TableRow>
                                 ))}
