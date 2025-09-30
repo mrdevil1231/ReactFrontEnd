@@ -46,12 +46,12 @@ function App() {
     return(
         <CardProvide>
             <div className={"MainBox"}>
-                <div className={"head"}>
+                <div className={"head container-sm"}>
                     <HeaderContent action={UpdateBody}/>
                     <hr/>
                 </div>
 
-                <div className={tab}>
+                <div className={tab+" container-sm"}>
                     <CallBody/>
                 </div>
                 <div className={"FooterContainer"}>

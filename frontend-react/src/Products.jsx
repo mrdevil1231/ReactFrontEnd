@@ -81,6 +81,7 @@ function Products(prop){
             <h1 className={"ProductTitle"}>Products</h1>
             <Autocomplete
                 multiple
+                size={"medium"}
                 id="checkboxes-tags-demo"
                 options={uniqueProducts}
                 disableCloseOnSelect
@@ -101,7 +102,7 @@ function Products(prop){
                         </li>
                     );
                 }}
-                style={{ width: 500 }}
+                style={{ width: 400 }}
                 renderInput={(params) => (
                     <TextField {...params} label="Filter Products" placeholder="Product Tags+" />
                 )}
